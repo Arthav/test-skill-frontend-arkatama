@@ -1,5 +1,4 @@
 <template>
-  <base-card>
   <form @submit.prevent="submitForm">
     <div class="form-control" :class="{invalid: !name.isValid}">
       <label for="name">Name</label>
@@ -24,7 +23,6 @@
     <p v-if="!formIsValid">Please fix the above errors and submit again.</p>
     <base-button>Add testimony</base-button>
   </form>
-  </base-card>
 </template>
 
 <script>
@@ -49,7 +47,7 @@ export default {
     },
     validateForm() {
       this.formIsValid = true;
-      if (this.name.val === '' && this.name.val.length > 3) {
+      if (this.name.val === '' && this.name.val.length > 3 && this.name.val.length <= 100) {
         this.name.isValid = false;
         this.formIsValid = false;
       }
