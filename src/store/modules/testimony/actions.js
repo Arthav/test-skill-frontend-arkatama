@@ -6,6 +6,7 @@ export default {
       testimony: data.testimony,
     };
 
+    console.log({testimonyData})
     const response = await fetch(
       `https://646c21af7b42c06c3b2abf71.mockapi.io/testimonials`,
       {
@@ -32,7 +33,6 @@ export default {
     const response = await fetch(
       `https://646c21af7b42c06c3b2abf71.mockapi.io/testimonials`
     );
-    console.log({response})
     const responseData = await response.json();
 
     if (!response.ok) {

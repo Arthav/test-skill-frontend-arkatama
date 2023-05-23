@@ -1,6 +1,6 @@
 export default {
   addTestimony(state, payload) {
-    state.coaches.push(payload);
+    state.testimonials.push(payload);
   },
   setTestimonials(state, payload) {
     state.testimonials = payload;

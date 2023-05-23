@@ -16,7 +16,7 @@ export default {
   },
   methods: {
     saveData(data) {
-      this.$store.dispatch('testimony/addTestomony', data);
+      this.$store.dispatch('testimony/addTestimony', data);
       this.$router.replace('/testimony');
     }
   }
